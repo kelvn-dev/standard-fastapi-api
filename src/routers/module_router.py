@@ -4,11 +4,9 @@ from fastapi import APIRouter, Depends, Request
 from fastapi.encoders import jsonable_encoder
 from fastapi_utils.cbv import cbv
 
-from schemas.api_response_schema import APIResponse, PaginatedData
-from schemas.listing_schema import ListingParams
-from schemas.module_schema import ModuleCreate, ModuleResponse, ModuleResponsePage, ModuleUpdate
+from schemas import APIResponse, PaginatedData, ModuleCreate, ModuleResponse, ModuleResponsePage, ModuleUpdate, ListingParams
 from security import UserSession, auth_check, get_current_user
-from services.module_service import module_service
+from services import module_service
 
 RESOURCE = 'modules'
 router = APIRouter(tags=[RESOURCE])

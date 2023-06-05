@@ -7,11 +7,9 @@ from pydantic import EmailStr
 from sqlalchemy.orm import Session
 
 from database import get_session
-from schemas.api_response_schema import APIResponse, PaginatedData
-from schemas.app_user_schema import (AppUserCreate, AppUserPassword, AppUserResponse, AppUserResponsePage, AppUserToken, AppUserUpdate)
-from schemas.listing_schema import ListingParams
+from schemas import APIResponse, PaginatedData, AppUserCreate, AppUserPassword, AppUserResponse, AppUserResponsePage, AppUserToken, AppUserUpdate, ListingParams
 from security import UserSession, auth_check, get_current_user
-from services.app_user_service import app_user_service
+from services import app_user_service
 
 RESOURCE = 'app_users'
 router = APIRouter(tags=[RESOURCE])

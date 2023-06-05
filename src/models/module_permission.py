@@ -3,7 +3,7 @@ from sqlalchemy import (Boolean, Column, DateTime, ForeignKey, String)
 from sqlalchemy.orm import relationship
 
 from database import Base
-from models.module import Module
+from models import Module
 
 
 class ModulePermission(Base):

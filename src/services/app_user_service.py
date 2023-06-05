@@ -11,10 +11,9 @@ from models.group import Group
 from models.module_permission import ModulePermission
 from schemas.app_user_schema import AppUserCreate, AppUserPassword, AppUserUpdate
 from services.base_service import CRUDBaseService
-from services.group_service import group_service
+from services import group_service
 from services.sendgrid_service import get_payload, send_email
-from utils.hashing_util import get_hashed_obj
-from utils.helper_utils import set_value
+from utils import get_hashed_obj, set_value
 
 
 class AppUserService(CRUDBaseService[AppUserCreate, AppUserUpdate]):

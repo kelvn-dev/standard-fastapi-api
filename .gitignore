@@ -27,4 +27,4 @@ archive.zip
 .*.sw?
 
 # alembic version
-*_.py
+versions

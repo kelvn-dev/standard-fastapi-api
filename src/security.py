@@ -7,10 +7,9 @@ from sqlalchemy import event
 from sqlalchemy.orm import Session
 
 from database import Base, get_session
-from models.app_user import AppUser
-from models.group import Group
-from services.app_user_service import app_user_service
-from utils.token_utils import decode_token
+from models import AppUser, Group
+from services import app_user_service
+from utils import decode_token
 
 #########################################################################################
 #

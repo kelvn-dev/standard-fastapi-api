@@ -9,7 +9,7 @@ from sqlalchemy import asc, desc, func
 from sqlalchemy.orm import Query, Session
 
 from schemas.listing_schema import ListingParams
-from utils.helper_utils import set_value
+from utils import set_value
 
 SchemaCreateType = TypeVar('SchemaCreateType', bound=BaseModel)
 SchemaUpdateType = TypeVar('SchemaUpdateType', bound=BaseModel)

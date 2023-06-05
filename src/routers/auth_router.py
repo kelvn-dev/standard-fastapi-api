@@ -5,9 +5,8 @@ from fastapi_utils.cbv import cbv
 from sqlalchemy.orm import Session
 
 from database import get_session
-from services.app_user_service import app_user_service
-from utils.hashing_util import verify_hashed_obj
-from utils.token_utils import create_access_token
+from services import app_user_service
+from utils import verify_hashed_obj, create_access_token
 
 router= APIRouter(tags=['authentication'])
 

@@ -6,8 +6,8 @@ from models.group import Group
 from models.module_permission import ModulePermission
 from schemas.group_schema import GroupCreate, GroupUpdate
 from services.base_service import CRUDBaseService
-from services.module_permission_service import module_permission_service
-from utils.helper_utils import set_value
+from services import module_permission_service
+from utils import set_value
 
 
 class GroupService(CRUDBaseService[GroupCreate, GroupUpdate]):

@@ -4,11 +4,9 @@ from fastapi import APIRouter, Depends, Request
 from fastapi.encoders import jsonable_encoder
 from fastapi_utils.cbv import cbv
 
-from schemas.api_response_schema import APIResponse, PaginatedData
-from schemas.group_schema import GroupCreate, GroupResponse, GroupResponsePage, GroupUpdate
-from schemas.listing_schema import ListingParams
+from schemas import APIResponse, PaginatedData, GroupCreate, GroupResponse, GroupResponsePage, GroupUpdate, ListingParams
 from security import UserSession, auth_check, get_current_user
-from services.group_service import group_service
+from services import group_service
 
 RESOURCE = 'groups'
 router = APIRouter(tags=[RESOURCE])
